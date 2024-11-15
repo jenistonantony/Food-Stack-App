@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_stack_app/home/home_page.dart';
 
 class AboutMenu extends StatefulWidget {
   const AboutMenu({super.key});
@@ -63,7 +64,13 @@ class _AboutMenuState extends State<AboutMenu> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             IconButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const HomePage()));
+                              },
                               icon: const Icon(Icons.arrow_back_ios),
                             ),
                             const Text(
